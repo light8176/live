@@ -3,12 +3,8 @@
 var request = require('superagent');
 
 exports.list = function(options, callback) {
-	console.log(options);
     request
-        .post('https://m.douyu.com/roomlists')
-        .send(options)
-        .set('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-        .set('X-Requested-With', 'XMLHttpRequest')
+        .get('http://www.panda.tv/live_lists?status=2&order=person_num&pageno='+ options.page +'&pagenum=' + options.count)
         .end(function(err, res){
         	if(err){
         		return callback(err);

@@ -1,6 +1,8 @@
 var router = require('express').Router();
-var douyu = require('../../service/douyu')
+var douyu = require('../../ctrl/api/douyu');
+var panda = require('../../ctrl/api/panda');
 
-router.get('/douyu', douyu.home)
+router.get('/douyu', douyu.list);
+router.get('/panda', panda.list);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './app.vue'
 import VueRouter from "vue-router";
 
 //开启debug模式
@@ -15,3 +15,4 @@ const app = new Vue({
   router: router,
   render: h => h(App)
 }).$mount('#main')
+

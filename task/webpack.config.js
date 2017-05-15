@@ -14,7 +14,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.vue$/,
-            loader: 'vue'
+            loader: 'vue-loader'
         }, {
             test: /\.js$/,
             loader: 'babel',
@@ -34,7 +34,9 @@ module.exports = {
         }]
     },
     resolve: {
-        alias: { vue: 'vue/dist/vue.js' }
+        extensions: ['', '.js', '.vue'],
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
     }
 }
-
